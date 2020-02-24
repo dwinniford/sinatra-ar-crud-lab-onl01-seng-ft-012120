@@ -108,6 +108,7 @@ describe "Magazine App" do
 
     it "submits the form via a patch request" do
       visit "/articles/#{@article2.id}/edit"
+     
       expect(find("[name=_method]", :visible => false).value).to match(/patch/i)
     end
 

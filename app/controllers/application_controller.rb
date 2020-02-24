@@ -1,4 +1,4 @@
-
+require 'pry'
 require_relative '../../config/environment'
 
 class ApplicationController < Sinatra::Base
@@ -37,7 +37,10 @@ class ApplicationController < Sinatra::Base
   
   patch '/articles/:id' do 
     @article2 = Article.find(params['id'])
-    @article2.update(title: params['title'], content: params['content'])
+   
+    @article2.update(params)
+
+    # title: params['title'], content: params['content']
     redirect "articles/#{@article2.id}"
   end 
   

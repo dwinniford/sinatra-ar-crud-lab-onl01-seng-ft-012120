@@ -12,7 +12,7 @@ gem 'database_cleaner', '~> 1.6.0'
 gem 'require_all'
 
 
-group :development do
+group :development, :test do
   gem "capybara"
   gem "pry"
   gem 'sqlite3', '~> 1.3.6'
